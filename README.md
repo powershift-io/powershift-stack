@@ -33,6 +33,18 @@ The Constitution adapts to your organization's human-to-agent ratio. Profiles ar
 
 The Solo Profile is compact enough to embed in an agent's system prompt. Every authority rule survives in every profile.
 
+### ⚖️ Legal Infrastructure
+Two adoption pathways — every organization covered, regardless of entity type or readiness to restructure.
+
+| Document | Purpose |
+|---|---|
+| [`legal/PowerShift_Operating_Agreement_Template_v1.0.md`](legal/PowerShift_Operating_Agreement_Template_v1.0.md) | Full LLC operating agreement built around constitutional governance — anchors the entire apparatus in enforceable legal jurisdiction |
+| [`legal/PowerShift_Ratification_Agreement_v1.0.md`](legal/PowerShift_Ratification_Agreement_v1.0.md) | Standalone adoption instrument — any existing entity type can ratify the Constitution without restructuring |
+
+The Operating Agreement is for organizations ready to make governed intelligence their legal foundation. The Ratification Agreement is for everyone else — adopt the rules, keep your existing entity, start governing with agents this week.
+
+→ [`docs/adoption-pathways.md`](docs/adoption-pathways.md) — choosing the right instrument
+
 ### 📋 Templates
 Ready-to-use templates for standing up governed intelligence in your organization.
 
@@ -50,6 +62,7 @@ Ready-to-use templates for standing up governed intelligence in your organizatio
 | [`docs/why-we-forked.md`](docs/why-we-forked.md) | The reasoning behind forking the Holacracy Constitution |
 | [`docs/composition-profiles.md`](docs/composition-profiles.md) | How profiles work and when to use each one |
 | [`docs/getting-started.md`](docs/getting-started.md) | Bootstrap the PowerShift® OS for your organization |
+| [`docs/adoption-pathways.md`](docs/adoption-pathways.md) | Two legal instruments — when to use each one |
 | [`docs/delegated-role-fillers.md`](docs/delegated-role-fillers.md) | How sub-agents participate in governance |
 
 ### 💡 Examples
@@ -65,25 +78,29 @@ Ready-to-use templates for standing up governed intelligence in your organizatio
 The open-source Stack is one layer of a larger architecture:
 
 ```
-┌─────────────────────────────────────────────────┐
-│           The PowerShift® Operating System       │
-│                                                  │
-│  ┌─────────────────────────────────────────────┐ │
-│  │  The Primer         (generative principles) │ │  ← You are here
-│  │  The Constitution   (governance rules)      │ │  ← You are here
-│  │  Profiles           (composition-aware)     │ │  ← You are here
-│  │  Templates          (bootstrap artifacts)   │ │  ← You are here
-│  ├─────────────────────────────────────────────┤ │
-│  │  Operating Agreement (legal wrapper)    [P] │ │
-│  │  Formation Documents (agent identity)   [P] │ │
-│  │  Agent Runtime       (hard constraints) [P] │ │
-│  └─────────────────────────────────────────────┘ │
-│                                                  │
-│  [P] = Proprietary / organization-specific       │
-└─────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│            The PowerShift® Operating System            │
+│                                                        │
+│  ┌──────────────────────────────────────────────────┐  │
+│  │  The Primer          (generative principles)     │  │  ← Open
+│  │  The Constitution    (governance rules)          │  │  ← Open
+│  │  Profiles            (composition-aware)         │  │  ← Open
+│  │  Templates           (bootstrap artifacts)       │  │  ← Open
+│  ├──────────────────────────────────────────────────┤  │
+│  │  Legal Infrastructure (adoption pathways)        │  │  ← Open (templates)
+│  │    - Operating Agreement Template (full LLC)     │  │
+│  │    - Ratification Agreement (any entity overlay) │  │
+│  ├──────────────────────────────────────────────────┤  │
+│  │  Formation Documents  (agent identity)       [O] │  │
+│  │  Agent Runtime        (hard constraints)     [O] │  │
+│  │  Skills / Plugins     (implementations)      [O] │  │
+│  └──────────────────────────────────────────────────┘  │
+│                                                        │
+│  [O] = Organization-specific                           │
+└──────────────────────────────────────────────────────┘
 ```
 
-The Stack provides the governance kernel. Your organization provides the legal wrapper, agent identities, and runtime configuration.
+The Stack provides the governance kernel and legal infrastructure. Your organization provides the agent identities, runtime configuration, and operational implementations.
 
 ---
 
@@ -103,10 +120,12 @@ The Stack provides the governance kernel. Your organization provides the legal w
 
 ## Who This Is For
 
-- **Solo founders running AI agent constellations** — the Solo Profile is your governance operating system
-- **Small teams integrating AI agents into their workflow** — the Agent Profile or Full Constitution fits
+- **Solo founders running AI agent constellations** — the Solo Profile + Operating Agreement Template gives you a complete governance OS with legal foundation
+- **Small teams integrating AI agents into their workflow** — the Agent Profile or Full Constitution fits; the Ratification Agreement gets you running without restructuring
+- **Existing organizations wanting to add governed AI** — the Ratification Agreement overlays constitutional governance onto any entity type without touching your existing legal structure
 - **Self-management practitioners** upgrading existing Holacracy/Sociocracy implementations for AI
-- **Organizations exploring decentralized governance** who want a proven framework, not theory
+- **Organizations exploring decentralized governance** who want a proven, legally grounded framework, not theory
+- **DAO LLC founders** — the Operating Agreement Template was derived from an actual algorithmically governed DAO LLC
 - **The OpenClaw community** — add the PowerShift® Stack to any OpenClaw deployment for governed intelligence
 
 ---
@@ -122,6 +141,8 @@ PowerShift® extends the Holacracy tradition with:
 - Dual-constraint architecture (soft + hard constraints)
 - The Orchestrator role (bridging governance and legal entity)
 - Natural language accessibility (v1.1 rewrite)
+- Legal infrastructure for real-world adoption (Operating Agreement + Ratification Agreement)
+- Decision Class framework (Class 0–3) with graduated human oversight
 
 This is an independent derivative work. "Holacracy" is a registered trademark of HolacracyOne, LLC. "PowerShift" is a registered trademark of powershift.io, LLC.
 
