@@ -64,6 +64,7 @@ Ready-to-use templates for standing up governed intelligence in your organizatio
 | [`docs/getting-started.md`](docs/getting-started.md) | Bootstrap the PowerShift® OS for your organization |
 | [`docs/adoption-pathways.md`](docs/adoption-pathways.md) | Two legal instruments — when to use each one |
 | [`docs/delegated-role-fillers.md`](docs/delegated-role-fillers.md) | How sub-agents participate in governance |
+| [`docs/diagrams/algo-org-stack.png`](docs/diagrams/algo-org-stack.png) | Visual stack map of the operating system, from governing participants down to substrate |
 
 ### 💡 Examples
 
