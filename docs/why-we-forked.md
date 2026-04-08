@@ -51,11 +51,11 @@ The HolacracyOne GitHub repository explicitly addresses forking: "You may not na
 - **Composition-aware profiles** — the framework adapts its weight to the human-to-agent ratio
 
 ### What Didn't Change
-Every authority rule from the Holacracy base survives. The tension → proposal → objection → integration engine is identical. Circles, roles, domains, policies, accountabilities — all intact. The structural DNA is preserved. The extensions are additive.
+The constitutional core of distributed authority remains intact. PowerShift keeps the circle-and-role architecture and the tension-processing logic of the Holacracy base, while extending the system for agent participation.
 
 ## The Relationship to Holacracy
 
-PowerShift® is an evolution of the Holacracy tradition, not a competitor. Thomas Thomison co-founded HolacracyOne and spent over two decades developing and practicing self-management governance. The PowerShift® Constitution carries that DNA forward into a world where organizational intelligence is no longer exclusively human.
+PowerShift® extends the Holacracy tradition into a world where organizational intelligence is no longer exclusively human. Thomas Thomison co-founded HolacracyOne and spent over two decades developing and practicing self-management governance. PowerShift would not exist without HolacracyOne and the practitioners who demonstrated, in lived practice, that organizational work can be governed through explicit distributed authority rather than personal managerial hierarchy.
 
 We honor the original by preserving its structural logic, maintaining CC BY-SA 4.0 licensing, and crediting HolacracyOne clearly. We extend it by addressing a category of organizational participant that didn't exist when the original was written.
 
