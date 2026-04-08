@@ -49,8 +49,8 @@
     {"type":"arrow","id":"a21","from":"layer2","to":"layer1","strokeColor":"#6c757d","strokeWidth":2,"roughness":0},
 
     {"type":"rectangle","id":"usesPanel","x":1030,"y":156,"width":380,"height":320,"strokeColor":"#495057","backgroundColor":"#f8f9fa","fillStyle":"solid","strokeWidth":2,"roughness":0},
-    {"type":"text","id":"usesTitle","x":1052,"y":174,"width":250,"height":22,"text":"Why this matters commercially","fontSize":20,"fontFamily":2,"strokeColor":"#1e1e1e"},
-    {"type":"text","id":"usesBody","x":1054,"y":214,"width":320,"height":220,"text":"Gary gets a legible\narchitecture surface.\n\nJonah gets a pitchable story\nwith a real adoption path.\n\nOrchestrators can see where\ngovernance ends and runtime begins.\n\nThe repo becomes a trust surface,\nnot just a document dump.","fontSize":16,"fontFamily":2,"strokeColor":"#495057"},
+    {"type":"text","id":"usesTitle","x":1052,"y":174,"width":220,"height":22,"text":"First Principles","fontSize":20,"fontFamily":2,"strokeColor":"#1e1e1e"},
+    {"type":"text","id":"usesBody","x":1054,"y":212,"width":326,"height":236,"text":"Agent = Cron / Loops +\nFile System / Markdown +\nBash / Unix Shell + LLMs\n\nAndreessen's frame:\nlanguage-model mindset +\nUnix mindset.\n\nBase architecture:\n• LLMs = reasoning engine\n• Shell = execution surface\n• Files + Markdown = state and memory\n• Cron / loops = heartbeat and autonomy","fontSize":15,"fontFamily":2,"strokeColor":"#495057"},
 
     {"type":"rectangle","id":"loopsPanel","x":1030,"y":512,"width":380,"height":400,"strokeColor":"#495057","backgroundColor":"#f8f9fa","fillStyle":"solid","strokeWidth":2,"roughness":0},
     {"type":"text","id":"loopsTitle","x":1052,"y":530,"width":230,"height":22,"text":"Cross-cutting operating loops","fontSize":20,"fontFamily":2,"strokeColor":"#1e1e1e"},
@@ -64,7 +64,6 @@
     {"type":"rectangle","id":"loop3","x":1055,"y":759,"width":330,"height":72,"strokeColor":"#862e9c","backgroundColor":"#f3d9fa","fillStyle":"solid","strokeWidth":2,"roughness":0},
     {"type":"text","id":"loop3t","x":1080,"y":776,"width":280,"height":34,"text":"Tension → Proposal → Objection →\nStructure change","fontSize":18,"fontFamily":2,"strokeColor":"#1e1e1e","textAlign":"center"},
 
-    {"type":"arrow","id":"repoArrow","from":"usesPanel","to":"layer3","strokeColor":"#40c057","strokeWidth":2,"roughness":0,"strokeStyle":"dashed"},
     {"type":"arrow","id":"opsArrow","from":"loopsPanel","to":"layer2","strokeColor":"#e8590c","strokeWidth":2,"roughness":0,"strokeStyle":"dashed"},
 
     {"type":"text","id":"footer","x":84,"y":1027,"width":720,"height":20,"text":"Repo: github.com/powershift-io/powershift-stack","fontSize":16,"fontFamily":3,"strokeColor":"#6c757d"}
