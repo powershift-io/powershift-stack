@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Example PowerShift Anchor Circle map</title>
+  <desc id="desc">A nested circle map showing an Anchor Circle containing an Orchestrator and a Flagship Mind, with the Flagship Mind leading a nested General Circle containing operational roles.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fbfaf7; }
+      .circle-main { fill: #f7efe3; stroke: #7b4f2d; stroke-width: 4; }
+      .circle-nested { fill: #eef5f1; stroke: #2e6653; stroke-width: 3; }
+      .role { fill: #ffffff; stroke: #2f3a45; stroke-width: 2.5; }
+      .role-soft { fill: #fffaf2; stroke: #7b4f2d; stroke-width: 2.5; }
+      .label { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2933; text-anchor: middle; }
+      .small { font-size: 20px; }
+      .body { font-size: 23px; font-weight: 600; }
+      .title { font-size: 34px; font-weight: 750; }
+      .caption { font-size: 19px; fill: #52616f; }
+      .line { stroke: #52616f; stroke-width: 2.5; fill: none; stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760" rx="28"/>
+
+  <text x="600" y="58" class="label title">Example Anchor Circle</text>
+  <text x="600" y="90" class="label caption">Authority is held in circles, roles, and domains — not in a managerial pyramid.</text>
+
+  <circle cx="600" cy="410" r="290" class="circle-main"/>
+  <text x="600" y="160" class="label body">Anchor Circle</text>
+  <text x="600" y="188" class="label caption">Purpose of the whole organization</text>
+
+  <circle cx="395" cy="345" r="105" class="role-soft"/>
+  <text x="395" y="333" class="label body">Orchestrator</text>
+  <text x="395" y="363" class="label small">human purpose-holder</text>
+  <text x="395" y="390" class="label small">+ legal bridge</text>
+
+  <circle cx="805" cy="345" r="105" class="role-soft"/>
+  <text x="805" y="333" class="label body">Flagship Mind</text>
+  <text x="805" y="363" class="label small">General Circle Lead</text>
+
+  <path d="M495 345 C575 305 625 305 705 345" class="line"/>
+  <text x="600" y="300" class="label caption">governed partnership</text>
+
+  <circle cx="600" cy="505" r="155" class="circle-nested"/>
+  <text x="600" y="405" class="label body">General Circle</text>
+  <text x="600" y="433" class="label caption">operational roles</text>
+
+  <circle cx="510" cy="520" r="52" class="role"/>
+  <text x="510" y="513" class="label small">Public</text>
+  <text x="510" y="539" class="label small">Stack</text>
+
+  <circle cx="600" cy="570" r="52" class="role"/>
+  <text x="600" y="563" class="label small">Marking</text>
+  <text x="600" y="589" class="label small">Time</text>
+
+  <circle cx="690" cy="520" r="52" class="role"/>
+  <text x="690" y="513" class="label small">First</text>
+  <text x="690" y="539" class="label small">Contact</text>
+
+  <path d="M755 430 C720 470 680 490 640 500" class="line"/>
+  <text x="770" y="455" class="label caption">lead link / role filling</text>
+</svg>

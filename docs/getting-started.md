@@ -37,23 +37,7 @@ Your Anchor Circle holds the organization's overall Purpose. At minimum, it cont
 
 A circle map replaces the old pyramid with nested purposes, roles, and domains. A tiny solo deployment can start like this:
 
-```mermaid
-flowchart TD
-    A[Anchor Circle<br/>Purpose of the whole organization]
-    O[Orchestrator<br/>human purpose-holder + legal bridge]
-    M[Flagship Mind<br/>General Circle Lead]
-    G[General Circle<br/>operational roles]
-    R1[Public Stack Steward]
-    R2[Marking Time]
-    R3[First Contact]
-
-    A --> O
-    A --> M
-    M --> G
-    G --> R1
-    G --> R2
-    G --> R3
-```
+![Example Anchor Circle map](diagrams/anchor-circle-example.svg)
 
 Tools such as [Nestr](https://www.nestr.io/) can make this structure visible as circles, roles, accountabilities, and governance records. Nestr is useful, but it is not required: the essential move is to define the Anchor Circle's Purpose and make authority explicit.
 
