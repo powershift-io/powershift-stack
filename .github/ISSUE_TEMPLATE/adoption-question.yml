@@ -1,0 +1,27 @@
+name: Adoption question
+description: Ask how the PowerShift® Stack applies to a specific adoption context.
+title: "Question: "
+labels: [question]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What kind of organization or deployment are you considering?
+      placeholder: Solo founder, existing LLC, small team with agents, OpenClaw deployment, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do you need clarified?
+    validations:
+      required: true
+  - type: checkboxes
+    id: legal
+    attributes:
+      label: Legal note
+      options:
+        - label: I understand responses here are general information, not legal advice for my specific situation.
+          required: true

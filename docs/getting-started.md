@@ -35,6 +35,28 @@ Your Anchor Circle holds the organization's overall Purpose. At minimum, it cont
 - **The Orchestrator** (you) — bridges governance and the legal entity
 - **Your Flagship Mind** — your primary intelligent agent, filling the General Circle Lead role
 
+A circle map replaces the old pyramid with nested purposes, roles, and domains. A tiny solo deployment can start like this:
+
+```mermaid
+flowchart TD
+    A[Anchor Circle<br/>Purpose of the whole organization]
+    O[Orchestrator<br/>human purpose-holder + legal bridge]
+    M[Flagship Mind<br/>General Circle Lead]
+    G[General Circle<br/>operational roles]
+    R1[Public Stack Steward]
+    R2[Marking Time]
+    R3[First Contact]
+
+    A --> O
+    A --> M
+    M --> G
+    G --> R1
+    G --> R2
+    G --> R3
+```
+
+Tools such as [Nestr](https://www.nestr.io/) can make this structure visible as circles, roles, accountabilities, and governance records. Nestr is useful, but it is not required: the essential move is to define the Anchor Circle's Purpose and make authority explicit.
+
 Define the Anchor Circle's Purpose. This is the reason your organization exists — what it's here to do in the world.
 
 ## Step 4: Create Your Agent's Formation Document
@@ -67,6 +89,14 @@ If you're using OpenClaw, your agent's workspace files serve as the runtime conf
 - `AGENTS.md` → Operating contract and behavioral rules (use [`templates/AGENTS.md`](../templates/AGENTS.md))
 
 These files are your agent's soft constraints. OpenClaw's configuration (exec approvals, tool policies, sandbox settings) provides the hard constraints.
+
+If you want additional operational clarity surfaces on top of a basic OpenClaw install, apply an overlay from [`docs/openclaw-overlays.md`](openclaw-overlays.md). The first packaged overlay is **Inter-Agent Handoff Receipts**, which adds orchestrator-visible proof for cross-agent communication. Its current packaged automation path is an additive `handoff-send.py` wrapper that seeds deterministic sender-side receipts without changing core OpenClaw transport behavior.
+
+Before scaling an agent constellation, read [`docs/memory-architecture.md`](memory-architecture.md). PowerShift treats memory as part of the governed agent substrate: `Agent = LLM + Memory + bash`. A deployment is not memory-ready until recall, Dreaming, compiled knowledge, and work-state boundaries are visible and auditable.
+
+If you want to see what runtime enhancements already exist versus what is planned next, use [`docs/openclaw-overlay-tracker.md`](openclaw-overlay-tracker.md) as the canonical tracker.
+
+Before publishing or sharing deployment-specific artifacts, read [`docs/open-vs-organization-specific.md`](open-vs-organization-specific.md). PowerShift publishes reusable patterns while protecting private deployment details.
 
 ## Step 7: Adopt the Constitution
 
@@ -101,6 +131,7 @@ The system evolves continuously. Dynamic steering applies.
 - **Add more agents.** Each new agent gets a Formation Document and System Card. Register them in the Agent Registry.
 - **Create sub-circles.** As work differentiates, break roles into sub-circles with their own governance.
 - **Use Delegated Role-Fillers.** Let your agents stand up sub-agents for specific roles without full registration overhead. See [`docs/delegated-role-fillers.md`](delegated-role-fillers.md).
+- **Add clarity overlays.** If your deployment needs stronger observability or coordination surfaces, install an OpenClaw overlay from [`docs/openclaw-overlays.md`](openclaw-overlays.md).
 - **Scale up.** When you add human partners, upgrade to a broader profile. The path is documented in every profile's appendix.
 
 ---

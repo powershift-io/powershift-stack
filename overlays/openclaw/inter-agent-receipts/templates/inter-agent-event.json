@@ -1,0 +1,14 @@
+{
+  "mode": "event",
+  "receipt_id": "receipt-example-001",
+  "thread_title": "Propagate policy update to sibling Mind",
+  "emitted_at": "2026-04-12 04:13 CDT",
+  "phase": "verified",
+  "actor_agent": "alpha",
+  "actor_session": "agent:alpha:main",
+  "summary": "The receiver-confirmed write was inspected and verified.",
+  "status": "verified",
+  "artifacts_changed": [],
+  "evidence": ["artifact inspection completed"],
+  "next_step": "Close the thread after final acknowledgment."
+}

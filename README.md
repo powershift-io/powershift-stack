@@ -6,6 +6,22 @@ The PowerShift® Stack provides everything you need to run an organization where
 
 ---
 
+## Start Here
+
+Choose the path that matches your current question.
+
+| If you are... | Start with |
+|---|---|
+| Evaluating the idea | [`primer/PowerShift_Primer_v1.0.md`](primer/PowerShift_Primer_v1.0.md), then [`docs/why-we-forked.md`](docs/why-we-forked.md) |
+| Adopting inside an existing organization | [`docs/adoption-pathways.md`](docs/adoption-pathways.md), then [`legal/PowerShift_Ratification_Agreement_v1.0.md`](legal/PowerShift_Ratification_Agreement_v1.0.md) |
+| Starting a solo Orchestrator deployment | [`constitution/profiles/solo-profile-v1.1.md`](constitution/profiles/solo-profile-v1.1.md), then [`examples/solo-orchestrator/`](examples/solo-orchestrator/) |
+| Running agents on OpenClaw | [`docs/openclaw-overlays.md`](docs/openclaw-overlays.md), then [`docs/memory-architecture.md`](docs/memory-architecture.md) |
+| Considering a contribution | [`CONTRIBUTING.md`](CONTRIBUTING.md), then [`docs/open-vs-organization-specific.md`](docs/open-vs-organization-specific.md) |
+
+The fastest conceptual path is: Primer → Profile → Getting Started → Example.
+
+---
+
 ## What's Inside
 
 ### 📖 The Primer
@@ -55,6 +71,14 @@ Ready-to-use templates for standing up governed intelligence in your organizatio
 | [`templates/SOUL.md`](templates/SOUL.md) | Agent identity and persona (OpenClaw format) |
 | [`templates/AGENTS.md`](templates/AGENTS.md) | Operating contract and behavioral rules (OpenClaw format) |
 
+### 🧩 OpenClaw Overlays
+Runtime-specific extensions for PowerShift deployments running on OpenClaw.
+
+| Overlay | Purpose |
+|---|---|
+| [`overlays/openclaw/inter-agent-receipts/`](overlays/openclaw/inter-agent-receipts/) | Orchestrator-visible proof for inter-agent handoffs, with shared markdown receipts, lifecycle threads, and an additive sender-side handoff wrapper |
+| [`docs/memory-architecture.md`](docs/memory-architecture.md) | OpenClaw memory architecture pattern for governed intelligence: recall, Dreaming, wiki canon, work-state boundaries, and scoped plugin pilots |
+
 ### 📚 Documentation
 
 | Document | What It Covers |
@@ -64,6 +88,12 @@ Ready-to-use templates for standing up governed intelligence in your organizatio
 | [`docs/getting-started.md`](docs/getting-started.md) | Bootstrap the PowerShift® OS for your organization |
 | [`docs/adoption-pathways.md`](docs/adoption-pathways.md) | Two legal instruments — when to use each one |
 | [`docs/delegated-role-fillers.md`](docs/delegated-role-fillers.md) | How sub-agents participate in governance |
+| [`docs/memory-architecture.md`](docs/memory-architecture.md) | Memory architecture for OpenClaw-based governed intelligence deployments |
+| [`docs/openclaw-overlays.md`](docs/openclaw-overlays.md) | Runtime-specific extensions to basic OpenClaw installs that belong in the PowerShift® Stack |
+| [`docs/openclaw-overlay-tracker.md`](docs/openclaw-overlay-tracker.md) | Canonical tracker for implemented and planned OpenClaw overlay enhancements |
+| [`docs/stack-taxonomy.md`](docs/stack-taxonomy.md) | Deeper architecture map of the Stack, from governance kernel through runtime patterns and substrate |
+| [`docs/open-vs-organization-specific.md`](docs/open-vs-organization-specific.md) | Boundary between the public Stack and private deployment/service-specific material |
+| [`docs/public-stack-steward-operating-model.md`](docs/public-stack-steward-operating-model.md) | Agency-maximizing operating model for stewarding this public repository |
 | [`docs/diagrams/algo-org-stack.png`](docs/diagrams/algo-org-stack.png) | Visual stack map of the operating system, from governing participants down to substrate |
 
 ### 💡 Examples
@@ -149,11 +179,19 @@ This is an independent derivative work. "Holacracy" is a registered trademark of
 
 ---
 
+## Release Status
+
+The next prepared release bundle is `2026.04-runtime-overlays`.
+
+That bundle adds the first OpenClaw runtime overlay surfaces, governed memory architecture guidance, repository contribution surfaces, and clearer navigation for public engagement. See [`CHANGELOG.md`](CHANGELOG.md).
+
+---
+
 ## Fork This
 
 This work is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/). You can fork it, extend it, adapt it for your organization or community. That's by design — governed intelligence should be forkable.
 
-If you build on this, we'd love to hear about it.
+If you build on this, we'd love to hear about it. If you want to propose a change here, start with [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
 

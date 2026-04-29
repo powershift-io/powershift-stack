@@ -1,0 +1,39 @@
+name: Stack proposal
+description: Propose a governance, legal, runtime, template, or example improvement.
+title: "Proposal: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: tension
+    attributes:
+      label: Tension
+      description: What gap, risk, opportunity, or need does this proposal address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change in the Stack?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Primer / Constitution / Profiles
+        - Legal adoption pathway
+        - Runtime reference pattern
+        - OpenClaw overlay
+        - Template
+        - Example
+        - Repository navigation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Public-safety / boundary notes
+      description: Does this touch private deployment details, legal posture, security posture, licensing, or external commitments?

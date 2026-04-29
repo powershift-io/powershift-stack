@@ -1,0 +1,25 @@
+name: Documentation issue
+description: Report unclear, missing, stale, or incorrect documentation.
+title: "Docs: "
+labels: [documentation]
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which file, section, or page needs attention?
+      placeholder: README.md, docs/getting-started.md, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or incorrect?
+      description: Describe the reader problem.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: If you have a concrete rewrite or structure suggestion, add it here.

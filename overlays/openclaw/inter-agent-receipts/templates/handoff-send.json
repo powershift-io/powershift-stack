@@ -1,0 +1,21 @@
+{
+  "thread_title": "Propagate policy update to sibling Mind",
+  "sender_agent": "alpha",
+  "sender_session": "agent:alpha:main",
+  "receiver_agent": "beta",
+  "receiver_session": "agent:beta:main",
+  "subject": "Propagate policy update",
+  "requested_action": "Store policy durably and confirm adoption.",
+  "message": "Please store the attached policy update durably, apply it in future decisions, and acknowledge receipt.",
+  "idempotency_key": "policy-update-2026-04-12-001",
+  "rationale_summary": "A low-risk wrapper around transport that emits a deterministic receipt immediately after send.",
+  "tags": ["inter-agent", "policy"],
+  "transport_argv": [
+    "python3",
+    "scripts/sessions-send-adapter.py",
+    "--session",
+    "{receiver_session}",
+    "--message-file",
+    "{message_file}"
+  ]
+}
