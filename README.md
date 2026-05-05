@@ -77,7 +77,11 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | Overlay | Purpose |
 |---|---|
 | [`overlays/openclaw/inter-agent-receipts/`](overlays/openclaw/inter-agent-receipts/) | Orchestrator-visible proof for inter-agent handoffs, with shared markdown receipts, lifecycle threads, and an additive sender-side handoff wrapper |
+| [`overlays/openclaw/mind-conduits/`](overlays/openclaw/mind-conduits/) | Governed Mind-to-Mind interconnects, starting with Tier 1 GitHub-backed packet exchange and a roadmap toward OpenClaw-native and remote-network tiers |
 | [`docs/memory-architecture.md`](docs/memory-architecture.md) | OpenClaw memory architecture pattern for governed intelligence: recall, Dreaming, wiki canon, work-state boundaries, and scoped plugin pilots |
+| [`docs/orchestrator-openclaw-upgrade-discipline.md`](docs/orchestrator-openclaw-upgrade-discipline.md) | Evidence-based OpenClaw upgrade process with preflight snapshots, post-update proof, rollback rules, and after-action capture |
+| [`docs/orchestrator-backup-restore-strategy.md`](docs/orchestrator-backup-restore-strategy.md) | Layered backup and restore strategy for OpenClaw-powered Orchestrator operations |
+| [`docs/orchestrator-openclaw-pattern-inventory.md`](docs/orchestrator-openclaw-pattern-inventory.md) | Working inventory of OpenClaw patterns worth packaging for Orchestrators |
 
 ### 📚 Documentation
 
@@ -91,6 +95,9 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | [`docs/memory-architecture.md`](docs/memory-architecture.md) | Memory architecture for OpenClaw-based governed intelligence deployments |
 | [`docs/openclaw-overlays.md`](docs/openclaw-overlays.md) | Runtime-specific extensions to basic OpenClaw installs that belong in the PowerShift® Stack |
 | [`docs/openclaw-overlay-tracker.md`](docs/openclaw-overlay-tracker.md) | Canonical tracker for implemented and planned OpenClaw overlay enhancements |
+| [`docs/orchestrator-openclaw-upgrade-discipline.md`](docs/orchestrator-openclaw-upgrade-discipline.md) | OpenClaw upgrade discipline for Orchestrators |
+| [`docs/orchestrator-backup-restore-strategy.md`](docs/orchestrator-backup-restore-strategy.md) | Backup and restore strategy for OpenClaw-powered operations |
+| [`docs/orchestrator-openclaw-pattern-inventory.md`](docs/orchestrator-openclaw-pattern-inventory.md) | Inventory of candidate OpenClaw patterns for Stack publication |
 | [`docs/stack-taxonomy.md`](docs/stack-taxonomy.md) | Deeper architecture map of the Stack, from governance kernel through runtime patterns and substrate |
 | [`docs/open-vs-organization-specific.md`](docs/open-vs-organization-specific.md) | Boundary between the public Stack and private deployment/service-specific material |
 | [`docs/public-stack-steward-operating-model.md`](docs/public-stack-steward-operating-model.md) | Agency-maximizing operating model for stewarding this public repository |

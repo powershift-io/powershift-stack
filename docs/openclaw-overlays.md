@@ -74,6 +74,49 @@ Current maturity:
 
 This overlay is a concrete example of a clarity surface that spans runtime coordination, enforcement visibility, and substrate-specific implementation.
 
+### Mind Conduits
+
+Path:
+- `overlays/openclaw/mind-conduits/`
+
+Purpose:
+- define governed interconnects between Minds / agents across a boundary
+- provide a Tier 1 GitHub-backed packet exchange pattern that can be deployed without OpenClaw gateway changes
+- preserve explicit scope, authority source, receipt, escalation, and audit trail for Mind-to-Mind coordination
+- document the roadmap from Git-backed packets to OpenClaw-native Conduit tools and eventual remote Mind network / broker infrastructure
+
+Includes:
+- overlay guide
+- packet template
+- registry template
+- lifecycle record template
+
+Current maturity:
+- **ready now:** Tier 1 Git-backed packet exchange using Markdown/JSON and Git commits
+- **planned next:** OpenClaw-native Conduit operations such as `conduit_send`, `conduit_inbox`, `conduit_ack`, and `conduit_escalate`
+- **planned later:** authenticated remote Mind network / broker for gateway-to-gateway or brokered delivery
+
+This overlay is the public-safe form of the Mind Conduit primitive: a governed interconnect for Minds that carries signal without merging authority boundaries.
+
+
+### Orchestrator operations guides
+
+Paths:
+- `docs/orchestrator-openclaw-upgrade-discipline.md`
+- `docs/orchestrator-backup-restore-strategy.md`
+- `docs/orchestrator-openclaw-pattern-inventory.md`
+- `templates/openclaw-upgrade-runbook.md`
+- `templates/pre-change-snapshot-checklist.md`
+- `templates/monthly-restore-drill.md`
+
+Purpose:
+- give Orchestrators reusable operating discipline for upgrades, backups, restore drills, and public-stack pattern selection
+- preserve evidence, rollback thinking, and recovery confidence around risky runtime changes
+- turn live operating lessons into public-safe templates without exposing private deployment details
+
+Current maturity:
+- **ready now:** working guide/template surfaces for review
+- **planned next:** filled redacted examples and retention-policy template
 
 ### Memory Architecture
 

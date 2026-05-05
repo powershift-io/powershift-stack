@@ -1,0 +1,56 @@
+{
+  "conduitId": "example-conduit",
+  "status": "draft",
+  "purpose": "Governed packet exchange between designated Mind endpoints",
+  "preparedBy": "<operator-or-role>",
+  "preparedAt": "YYYY-MM-DD",
+  "tier": "tier-1-github",
+  "conveningAuthority": "<person-role-or-agreement>",
+  "endpoints": [
+    {
+      "id": "endpoint-a",
+      "label": "Endpoint A",
+      "type": "mind",
+      "operatorContact": "<private-contact-path>",
+      "inboxPath": "inbox/endpoint-b-to-endpoint-a"
+    },
+    {
+      "id": "endpoint-b",
+      "label": "Endpoint B",
+      "type": "mind",
+      "operatorContact": "<private-contact-path>",
+      "inboxPath": "inbox/endpoint-a-to-endpoint-b"
+    }
+  ],
+  "paths": {
+    "conduitCharter": "conduit.md",
+    "records": "records",
+    "artifacts": "artifacts",
+    "packetTemplate": "templates/packet.md",
+    "recordTemplate": "templates/record.md"
+  },
+  "packetStates": [
+    "draft",
+    "sent",
+    "received",
+    "in_progress",
+    "escalated",
+    "closed"
+  ],
+  "recordEvents": [
+    "sent",
+    "received",
+    "acknowledged",
+    "responded",
+    "escalated",
+    "closed"
+  ],
+  "humanEscalationRequiredFor": [
+    "sensitive boundary judgment",
+    "confidential disclosure",
+    "scope change",
+    "authority ambiguity",
+    "legal/financial/security implications",
+    "changes to identity, runtime policy, credentials, or protected architecture"
+  ]
+}
