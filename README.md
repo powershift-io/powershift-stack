@@ -82,6 +82,9 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | [`docs/orchestrator-openclaw-upgrade-discipline.md`](docs/orchestrator-openclaw-upgrade-discipline.md) | Evidence-based OpenClaw upgrade process with preflight snapshots, post-update proof, rollback rules, and after-action capture |
 | [`docs/orchestrator-backup-restore-strategy.md`](docs/orchestrator-backup-restore-strategy.md) | Layered backup and restore strategy for OpenClaw-powered Orchestrator operations |
 | [`docs/orchestrator-openclaw-pattern-inventory.md`](docs/orchestrator-openclaw-pattern-inventory.md) | Working inventory of OpenClaw patterns worth packaging for Orchestrators |
+| [`docs/orchestrator-assessment-primer.md`](docs/orchestrator-assessment-primer.md) | Public guide to the Orchestrator Assessment and its Mind-executed evidence model |
+| [`docs/orchestrator-assessment-protocol.md`](docs/orchestrator-assessment-protocol.md) | Protocol for private, conduit-safe, and public-safe Orchestrator Assessments |
+| [`templates/orchestrator-assessment-private.md`](templates/orchestrator-assessment-private.md) | Suggested minimum spine for private Orchestrator Assessment artifacts |
 
 ### 📚 Documentation
 
@@ -101,6 +104,9 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | [`docs/stack-taxonomy.md`](docs/stack-taxonomy.md) | Deeper architecture map of the Stack, from governance kernel through runtime patterns and substrate |
 | [`docs/open-vs-organization-specific.md`](docs/open-vs-organization-specific.md) | Boundary between the public Stack and private deployment/service-specific material |
 | [`docs/public-stack-steward-operating-model.md`](docs/public-stack-steward-operating-model.md) | Agency-maximizing operating model for stewarding this public repository |
+| [`docs/orchestrator-assessment-primer.md`](docs/orchestrator-assessment-primer.md) | Public guide to the Orchestrator Assessment and its Mind-executed evidence model |
+| [`docs/orchestrator-assessment-protocol.md`](docs/orchestrator-assessment-protocol.md) | Protocol for private, conduit-safe, and public-safe Orchestrator Assessments |
+| [`docs/thomas-orchestrator-assessment-case-study.md`](docs/thomas-orchestrator-assessment-case-study.md) | Founder exemplar showing a public-safe assessment surface |
 | [`docs/diagrams/algo-org-stack.png`](docs/diagrams/algo-org-stack.png) | Visual stack map of the operating system, from governing participants down to substrate |
 
 ### 💡 Examples
