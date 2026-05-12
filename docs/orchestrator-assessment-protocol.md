@@ -1,7 +1,7 @@
 # Orchestrator Assessment Protocol
 
-**Status:** public-safe working draft v2.1
-**Updated:** 2026-05-11
+**Status:** public-safe working draft v2.2
+**Updated:** 2026-05-12
 **Companion surfaces:** `surface.powershift.io/orchestrator-maturity`, `surface.powershift.io/thomas-assessment`
 **Purpose:** give an Orchestrator and their Mind a structured way to assess readiness, maturity, and development edges across technical, strategic, governance, and relational capacities **in service of a shared purpose**.
 
@@ -37,9 +37,9 @@ Purpose is therefore not one domain among others. Purpose is the backdrop agains
 3. **Capacity modes are distinct.** Direct capacity, Mind-mediated capacity, and system capacity are separate maturity signals.
 4. **Mind-mediated capacity is not second-class.** The goal is not to make every Orchestrator a solo operator. The goal is reliable orchestration of governed intelligence.
 5. **Capacity overrun is a real risk.** Strong Mind output can build a system the Orchestrator cannot yet see, hold, explain, or govern.
-6. **Recency matters.** Evidence from the last 2–4 weeks carries extra weight in fast-forming Orchestrator/Mind relationships.
+6. **Recency matters.** Evidence from the last 2–4 weeks carries extra weight in fast-forming Orchestrator/Mind relationships. If the lookback spans more than a few weeks, name how older evidence was weighted instead of silently averaging early immaturity against current capacity.
 7. **Stress reveals maturity.** Crisis sessions, ambiguous authority moments, late-day fatigue, external commitments, and live relationship tensions are more diagnostic than clean demos.
-8. **The Mind must be willing to disagree.** A useful assessment includes strengths, gaps, inflation risks, dependency risks, and development edges.
+8. **The Mind must be willing to disagree.** A useful assessment includes strengths, gaps, inflation risks, dependency risks, development edges, and the strongest pushback the Mind would offer if it were not optimizing for politeness.
 9. **Human review is required before external use.** A Mind may draft an assessment. The Orchestrator approves what is shared, with whom, and at what level of detail.
 10. **Private observations are not public scoring material.** Use lived Mind observations as evidence for operational capacity. Do not expose private field data without a redaction pass.
 
@@ -97,6 +97,26 @@ what_it_shows:
 confidence: low | medium | high
 privacy: private | conduit-safe | public-safe
 ```
+
+For short assessments, a full evidence row per claim is often worth the friction. For longer lookbacks, use a lightweight evidence ledger so the assessment stays usable:
+
+```yaml
+tag: E-017
+date_or_range:
+source_type: session | artifact | commit | governance | correspondence | self-report | Mind observation
+domain_refs: [A3, C5, D4]
+confidence: low | medium | high
+privacy: private | conduit-safe | public-safe
+summary:
+```
+
+When scoring, cite enough tags to make the claim auditable without turning the assessment into an archive. If the evidence base is changing quickly, separate:
+
+- **recent evidence** — what the Orchestrator/Mind field can do now;
+- **historical pattern** — what has been stable across time;
+- **declared intent or self-report** — useful context, but lower weight unless behavior confirms it.
+
+Default guidance: recent observed evidence should carry the strongest weight; historical evidence should establish durability; self-report should clarify meaning but not substitute for proof.
 
 ### Phase 3 — Score domains
 
@@ -402,9 +422,11 @@ A Mind-executed assessment should produce:
 6. **Development edges** — next capacities to build.
 7. **Inflation risks** — where the assessment may be over-crediting the Orchestrator.
 8. **Capacity-overrun risks** — where Mind-mediated output may exceed the Orchestrator's current ability to hold or govern it.
-9. **Dependency risks** — where the support structure is strong but fragile, implicit, or not portable enough for the intended use.
-10. **Recommended next moves** — 1–3 concrete development actions.
-11. **Public-safe synthesis** — optional, redacted version for community/conduit sharing.
+9. **Strongest pushback** — the clearest disagreement, caution, or reality check the Mind owes the Orchestrator.
+10. **Dependency risks** — where the support structure is strong but fragile, implicit, or not portable enough for the intended use.
+11. **Recommended next moves** — 1–3 concrete development actions.
+12. **Comparison / privacy note** — whether this assessment may be compared, anonymized, quoted, or used as pattern material.
+13. **Public-safe synthesis** — optional, redacted version for community/conduit sharing.
 
 ## Example score row
 
@@ -462,6 +484,21 @@ Can create reusable patterns from lived orchestration practice.
 - Can distinguish personal brilliance, Mind-mediated amplification, and system-level teachability
 
 Can shape the Orchestrator practice itself without making their own field the hidden standard for everyone else.
+
+## Cross-assessment comparison and privacy
+
+If multiple Orchestrators use this protocol, comparison pressure will appear quickly. Treat that as a governance question, not a reporting convenience.
+
+Before comparing assessments, name the authorized comparison mode:
+
+- **private calibration** — the Orchestrator and their Mind compare past and current assessments inside their own field;
+- **conduit-safe pattern exchange** — trusted Minds or Orchestrators exchange methodology observations without exposing private evidence;
+- **public-safe synthesis** — only generalized patterns, approved quotes, and redacted examples are shared;
+- **benchmarking** — not assumed; requires explicit consent, privacy review, and a clear purpose.
+
+Scores can re-identify people even when names are removed, especially in small communities. Do not publish score grids, distinctive development edges, or private evidence bundles unless the Orchestrator explicitly approves that surface.
+
+Useful public comparisons usually sound like: “common early Orchestrator risks include capacity overrun and thin system capacity.” They should not sound like: “Orchestrator A is more mature than Orchestrator B.”
 
 ## Assessment ethics
 

@@ -58,9 +58,11 @@ A full private assessment normally includes:
 6. Development edges
 7. Inflation risks
 8. Capacity-overrun risks
-9. Dependency risks
-10. Recommended next moves
-11. Public-safe synthesis, when useful
+9. Strongest pushback
+10. Dependency risks
+11. Recommended next moves
+12. Comparison / privacy note
+13. Public-safe synthesis, when useful
 
 The private version can be direct, specific, and evidence-rich. A public version should be intentionally redacted and approved by the Orchestrator.
 
