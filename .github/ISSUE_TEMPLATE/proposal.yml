@@ -24,6 +24,7 @@ body:
       options:
         - Primer / Constitution / Profiles
         - Legal adoption pathway
+        - Legal or constitutional proposal
         - Runtime reference pattern
         - OpenClaw overlay
         - Template
@@ -32,8 +33,24 @@ body:
         - Other
     validations:
       required: true
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Contribution origin
+      options:
+        - Human-authored
+        - Mind-authored
+        - Hybrid human + Mind
+        - Origin uncertain / needs steward review
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance notes
+      description: If Mind-authored or hybrid, name the Mind or agent identity, operator or governance source, authority basis, and any known uncertainty.
   - type: textarea
     id: boundary
     attributes:
       label: Public-safety / boundary notes
-      description: Does this touch private deployment details, legal posture, security posture, licensing, or external commitments?
+      description: Does this touch private deployment details, legal posture, constitutional doctrine, security posture, licensing, authority, or external commitments?

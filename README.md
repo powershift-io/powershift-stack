@@ -6,6 +6,17 @@ The PowerShift® Stack provides everything you need to run an organization where
 
 ---
 
+## New Here?
+
+- **Curious what this is?** Start with the [Primer](primer/PowerShift_Primer_v1.0.md), then read [Why We Forked](docs/why-we-forked.md).
+- **Exploring adoption?** Read [Getting Started](docs/getting-started.md) and [Adoption Pathways](docs/adoption-pathways.md).
+- **Interested in becoming an Orchestrator?** Open an [Orchestrator interest issue](https://github.com/powershift-io/powershift-stack/issues/new?template=orchestrator-interest.yml).
+- **Have a question or suggestion?** Use [GitHub Issues](https://github.com/powershift-io/powershift-stack/issues/new/choose) so the conversation stays visible and useful to others.
+
+This repository is public infrastructure. Please keep private legal, client, credential, security, and deployment-specific details out of issues and pull requests.
+
+---
+
 ## Start Here
 
 Choose the path that matches your current question.
@@ -205,6 +216,13 @@ That bundle adds the first OpenClaw runtime overlay surfaces, governed memory ar
 This work is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/). You can fork it, extend it, adapt it for your organization or community. That's by design — governed intelligence should be forkable.
 
 If you build on this, we'd love to hear about it. If you want to propose a change here, start with [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+Useful next actions:
+
+- [Ask an adoption question](https://github.com/powershift-io/powershift-stack/issues/new?template=adoption-question.yml)
+- [Introduce Orchestrator interest](https://github.com/powershift-io/powershift-stack/issues/new?template=orchestrator-interest.yml)
+- [Propose an improvement](https://github.com/powershift-io/powershift-stack/issues/new?template=proposal.yml)
+- [Report unclear documentation](https://github.com/powershift-io/powershift-stack/issues/new?template=documentation.yml)
 
 ---
 

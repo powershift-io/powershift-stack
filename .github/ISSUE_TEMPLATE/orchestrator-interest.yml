@@ -1,0 +1,45 @@
+name: Orchestrator interest
+description: Introduce yourself if you are exploring becoming an Orchestrator or applying the Stack in real work.
+title: "Orchestrator interest: "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when you want to start a public, general conversation about applying the PowerShift® Stack. Do not include private legal, client, credential, or security details.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What kind of work, organization, or agent constellation are you exploring?
+      placeholder: Solo founder, existing company, DAO LLC, family-office-like structure, community, OpenClaw deployment, etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Current stage
+      options:
+        - Curious / learning
+        - Exploring adoption
+        - Preparing a pilot
+        - Already operating with agents
+        - Looking for contribution or collaboration path
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What would help?
+      description: What question, missing guide, example, template, or next step would make this easier?
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Public boundary
+      options:
+        - label: I have not included private credentials, client-confidential details, or legal advice requests for a specific situation.
+          required: true
+        - label: I understand responses here are general information, not legal advice.
+          required: true

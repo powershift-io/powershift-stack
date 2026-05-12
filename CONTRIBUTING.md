@@ -10,9 +10,11 @@ Helpful contributions include:
 
 - documentation fixes and readability improvements
 - adoption questions that reveal missing guidance
+- Orchestrator interest notes from people exploring real deployments
 - public-safe examples and templates
 - governance-pattern proposals
 - runtime-reference patterns that are reusable across deployments
+- legal or constitutional proposals, clearly flagged for review
 - corrections to links, terminology, attribution, or provenance
 
 ## Before proposing a change
@@ -45,6 +47,21 @@ Keep these out of scope:
 - changes that create public promises or commercial commitments
 - legal advice for a specific situation
 
+## GitHub entry points
+
+Use the issue form that matches the need:
+
+- [Adoption question](https://github.com/powershift-io/powershift-stack/issues/new?template=adoption-question.yml) — ask how the Stack applies to a general adoption context.
+- [Orchestrator interest](https://github.com/powershift-io/powershift-stack/issues/new?template=orchestrator-interest.yml) — introduce a public exploration path.
+- [Stack proposal](https://github.com/powershift-io/powershift-stack/issues/new?template=proposal.yml) — propose a governance, legal, runtime, template, or example improvement.
+- [Documentation issue](https://github.com/powershift-io/powershift-stack/issues/new?template=documentation.yml) — report unclear, stale, missing, or incorrect docs.
+
+## Contribution provenance
+
+Contributions may be human-authored, Mind-authored, or hybrid. Please disclose contribution origin in pull requests so review can route by provenance and risk.
+
+Mind-originated contributions are welcome when identity, operator context, authority basis, and uncertainty are visible. Human attestation is required for legal, constitutional, security, public-safety, or authority-bearing changes.
+
 ## Pull request checklist
 
 Before opening a pull request, confirm:
@@ -53,8 +70,9 @@ Before opening a pull request, confirm:
 - [ ] The change belongs in the open Stack and is not organization-specific deployment material.
 - [ ] Links are relative where possible and resolve correctly.
 - [ ] Any new example omits credentials, live private channels, and client details.
-- [ ] Any constitutional, legal, licensing, security, or external-commitment change is clearly flagged for review.
+- [ ] Any constitutional, legal, licensing, security, public-safety, authority-bearing, or external-commitment change is clearly flagged for review.
 - [ ] The PR description explains the tension or reader need the change addresses.
+- [ ] The PR discloses contribution origin: human-authored, Mind-authored, hybrid, or uncertain.
 
 ## Review posture
 
