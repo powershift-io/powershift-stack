@@ -2,15 +2,44 @@
 
 This changelog tracks public release bundles for the PowerShift® Stack.
 
-The repository uses date-framed release bundles for public Stack evolution. Constitutional, legal, and runtime artifacts may also carry their own internal version numbers where useful.
+The repository uses two version layers:
 
-## Upcoming — `2026.04-runtime-overlays`
+- **Artifact versions** such as `v1.0` and `v1.1` for constitutional, legal, primer, and template documents.
+- **Repository bundles** such as `2026.05-public-engagement` for public Stack evolution across many artifacts.
 
-Status: in preparation.
+Current public baseline on `main`: `2026.05-public-engagement`.
 
-Purpose: make the public Stack more navigable and introduce the first OpenClaw runtime overlay surfaces.
+## Current — `2026.05-public-engagement`
 
-Planned contents:
+Status: live on `main` as of 2026-05-13.
+
+Purpose: make the repository coherent for the first wave of public engagement and give readers clear entry points into the constitutional, operational, and OpenClaw overlay layers.
+
+Included:
+
+- Improve README navigation for new readers.
+- Add contribution model, issue templates, and pull request template.
+- Add Stack taxonomy documentation.
+- Add OpenClaw overlay framing and overlay tracker.
+- Add Inter-Agent Handoff Receipts overlay package.
+- Add Mind Conduits overlay package.
+- Add governed memory architecture guide.
+- Add OpenClaw backup/restore strategy, upgrade discipline, and pattern inventory guides.
+- Add public open-vs-organization-specific boundary guidance.
+- Add Orchestrator assessment primer, protocol, private template, and public case study.
+- Add Public Stack Steward operating model for agency-maximizing repo stewardship.
+
+Notes:
+
+- The PowerShift® Primer remains at artifact version `v1.0`.
+- The PowerShift® Constitution remains available as `v1.0` and `v1.1`; `v1.1` is the current readable constitutional reference.
+- The legal templates remain at artifact version `v1.0 TEMPLATE`.
+
+## Integrated — `2026.04-runtime-overlays`
+
+Status: integrated into `2026.05-public-engagement`.
+
+Original scope:
 
 - Add Stack taxonomy documentation.
 - Add OpenClaw overlay framing.
@@ -23,6 +52,8 @@ Planned contents:
 - Improve README navigation for new readers.
 
 ## Initial public Stack
+
+Status: live as the base artifact set for the public repository.
 
 Included:
 

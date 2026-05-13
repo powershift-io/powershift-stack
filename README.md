@@ -205,9 +205,9 @@ This is an independent derivative work. "Holacracy" is a registered trademark of
 
 ## Release Status
 
-The next prepared release bundle is `2026.04-runtime-overlays`.
+Current public baseline: `2026.05-public-engagement`.
 
-That bundle adds the first OpenClaw runtime overlay surfaces, governed memory architecture guidance, repository contribution surfaces, and clearer navigation for public engagement. See [`CHANGELOG.md`](CHANGELOG.md).
+This baseline includes the first OpenClaw runtime overlay surfaces, governed memory architecture guidance, repository contribution surfaces, Orchestrator assessment materials, and clearer navigation for public engagement. See [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
