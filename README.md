@@ -28,6 +28,7 @@ Choose the path that matches your current question.
 | Starting a solo Orchestrator deployment | [`constitution/profiles/solo-profile-v1.1.md`](constitution/profiles/solo-profile-v1.1.md), then [`examples/solo-orchestrator/`](examples/solo-orchestrator/) |
 | Running agents on OpenClaw | [`docs/openclaw-overlays.md`](docs/openclaw-overlays.md), then [`docs/memory-architecture.md`](docs/memory-architecture.md) |
 | Considering a contribution | [`CONTRIBUTING.md`](CONTRIBUTING.md), then [`docs/open-vs-organization-specific.md`](docs/open-vs-organization-specific.md) |
+| New to GitHub | [`docs/github-without-the-git.md`](docs/github-without-the-git.md), then [`docs/github-for-orchestrators.md`](docs/github-for-orchestrators.md) |
 
 The fastest conceptual path is: Primer → Profile → Getting Started → Example.
 
@@ -118,6 +119,9 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | [`docs/orchestrator-assessment-primer.md`](docs/orchestrator-assessment-primer.md) | Public guide to the Orchestrator Assessment and its Mind-executed evidence model |
 | [`docs/orchestrator-assessment-protocol.md`](docs/orchestrator-assessment-protocol.md) | Protocol for private, conduit-safe, and public-safe Orchestrator Assessments |
 | [`docs/thomas-orchestrator-assessment-case-study.md`](docs/thomas-orchestrator-assessment-case-study.md) | Founder exemplar showing a public-safe assessment surface |
+| [`docs/github-without-the-git.md`](docs/github-without-the-git.md) | Beginner-friendly GitHub primer for Orchestrators: shared folder with memory, app store for intelligence, sync bridge, backup, and collaboration surface |
+| [`docs/github-for-orchestrators.md`](docs/github-for-orchestrators.md) | Next-layer GitHub guide covering core concepts, PowerShift usage, Mind Conduits, provenance, and contribution paths |
+| [`docs/github-for-orchestrators-visual-brief.md`](docs/github-for-orchestrators-visual-brief.md) | Infographic and video production brief for the GitHub-for-Orchestrators teaching assets |
 | [`docs/diagrams/algo-org-stack.png`](docs/diagrams/algo-org-stack.png) | Visual stack map of the operating system, from governing participants down to substrate |
 
 ### 💡 Examples
