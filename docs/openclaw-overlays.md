@@ -107,6 +107,8 @@ Paths:
 - `docs/orchestrator-openclaw-pattern-inventory.md`
 - `templates/openclaw-upgrade-runbook.md`
 - `templates/pre-change-snapshot-checklist.md`
+- `templates/backup-retention-policy.md`
+- `templates/backup-freshness-receipt.md`
 - `templates/monthly-restore-drill.md`
 
 Purpose:
@@ -116,7 +118,7 @@ Purpose:
 
 Current maturity:
 - **ready now:** working guide/template surfaces for review
-- **planned next:** filled redacted examples and retention-policy template
+- **planned next:** filled redacted examples for backup/restore and upgrade discipline
 
 ### Memory Architecture
 

@@ -1,7 +1,7 @@
 # Orchestrator Backup and Restore Strategy for OpenClaw-Powered Operations
 
 **Status:** public-safe working guide  
-**Companion templates:** `templates/pre-change-snapshot-checklist.md`, `templates/monthly-restore-drill.md`
+**Companion templates:** `templates/pre-change-snapshot-checklist.md`, `templates/backup-retention-policy.md`, `templates/backup-freshness-receipt.md`, `templates/monthly-restore-drill.md`
 
 ## Why this matters
 
@@ -22,6 +22,8 @@ A serious backup posture lets an Orchestrator answer four questions:
 - Restore drills prove what archives merely promise.
 - Risky runtime changes deserve a named pre-change snapshot.
 - Backup scheduling should survive trouble in the runtime it protects.
+- Scheduled backup runs should not depend on an unlocked desktop session or live interactive secret login.
+- Freshness and verification state should be visible without reading raw logs by hand.
 
 ## State classification model
 
@@ -123,6 +125,19 @@ Schedule proof that the backup can rebuild a working lane.
 
 Recommended cadence: monthly for serious operations, plus a drill after major backup architecture changes.
 
+## Automation discipline
+
+The backup posture is incomplete until it can run truthfully on its own.
+
+That means:
+
+- the scheduler lives outside the runtime being protected, such as the host operating system scheduler, service manager, or an external recovery node;
+- the backup job can obtain required secrets non-interactively through a service-safe mechanism rather than a human being present to unlock a desktop tool;
+- each run emits a machine-readable receipt for backup freshness and verification freshness;
+- logs exist, but the operator does not need to parse logs just to answer whether the last backup and last verification succeeded.
+
+This is a reliability rule, not a convenience preference. If backup success depends on the exact runtime, login posture, or interactive tool state that the backup is meant to recover from, the posture is weaker than it looks.
+
 ## Baseline cadence and retention
 
 A practical starting point:
@@ -135,6 +150,21 @@ A practical starting point:
 - longer retention for cold corpus than for hot-state snapshots.
 
 Tune this to the deployment’s risk, budget, and operating tempo.
+
+## Freshness receipt standard
+
+A backup system should leave behind enough structured evidence that an Orchestrator can review posture quickly.
+
+Minimum receipt fields:
+
+- run start and completion timestamps;
+- backup class covered, such as hot state or cold corpus;
+- success or failure outcome;
+- verification status if a check or sample restore ran;
+- snapshot or archive identifiers when the backing tool supports them;
+- retention action summary if pruning ran.
+
+These receipts may be JSON files, structured database rows, or another inspectable machine-readable surface. The important point is that freshness becomes queryable and reviewable instead of living only inside terminal scrollback.
 
 ## Restore drill standard
 

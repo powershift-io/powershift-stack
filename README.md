@@ -93,6 +93,8 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 | [`docs/memory-architecture.md`](docs/memory-architecture.md) | OpenClaw memory architecture pattern for governed intelligence: recall, Dreaming, wiki canon, work-state boundaries, and scoped plugin pilots |
 | [`docs/orchestrator-openclaw-upgrade-discipline.md`](docs/orchestrator-openclaw-upgrade-discipline.md) | Evidence-based OpenClaw upgrade process with preflight snapshots, post-update proof, rollback rules, and after-action capture |
 | [`docs/orchestrator-backup-restore-strategy.md`](docs/orchestrator-backup-restore-strategy.md) | Layered backup and restore strategy for OpenClaw-powered Orchestrator operations |
+| [`templates/backup-retention-policy.md`](templates/backup-retention-policy.md) | Policy template for backup classes, retention windows, independence rules, freshness evidence, and restore proof |
+| [`templates/backup-freshness-receipt.md`](templates/backup-freshness-receipt.md) | Receipt template for backup run outcome, artifact evidence, verification status, retention action, and freshness decision |
 | [`docs/orchestrator-openclaw-pattern-inventory.md`](docs/orchestrator-openclaw-pattern-inventory.md) | Working inventory of OpenClaw patterns worth packaging for Orchestrators |
 | [`docs/orchestrator-assessment-primer.md`](docs/orchestrator-assessment-primer.md) | Public guide to the Orchestrator Assessment and its Mind-executed evidence model |
 | [`docs/orchestrator-assessment-protocol.md`](docs/orchestrator-assessment-protocol.md) | Protocol for private, conduit-safe, and public-safe Orchestrator Assessments |

@@ -44,9 +44,9 @@ Use it as a workbench: select the next public artifact, confirm the boundary, th
 
 ### 6. OpenClaw backup and restore strategy
 
-**Current surfaces:** `docs/orchestrator-backup-restore-strategy.md`, `templates/pre-change-snapshot-checklist.md`, `templates/monthly-restore-drill.md`  
+**Current surfaces:** `docs/orchestrator-backup-restore-strategy.md`, `templates/pre-change-snapshot-checklist.md`, `templates/backup-retention-policy.md`, `templates/backup-freshness-receipt.md`, `templates/monthly-restore-drill.md`
 **Value:** gives Orchestrators a layered safety model: hot state, cold corpus, versioned identity, offsite recovery, and restore drills.  
-**Next move:** add a retention-policy template.
+**Next move:** add a short filled public-safe example excerpt after review.
 
 ## High-value candidates beyond the current staged set
 
