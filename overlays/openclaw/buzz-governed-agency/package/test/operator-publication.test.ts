@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { CredentialGatedPublicationReconciler } from "../src/operator-publication.js";
+const source = "aa".repeat(32); const reply = "bb".repeat(32);
+let leases = 0; let closes = 0; let publishes = 0;
+const broker = { async lease() { leases++; return { async publish() { publishes++; return { status: "accepted" as const, reply_event_id: reply }; }, close() { closes++; } }; } };
+const pending = new CredentialGatedPublicationReconciler({ reader: { async read() { return { status: "pending" as const }; } }, broker, verifier: { async verify() { return true; } } });
+assert.equal((await pending.reconcile(source)).status, "retryable"); assert.equal(leases, 0);
+const invalid = new CredentialGatedPublicationReconciler({ reader: { async read() { return { status: "invalid" as const, code: "tools_present" }; } }, broker, verifier: { async verify() { return true; } } });
+assert.equal((await invalid.reconcile(source)).status, "indeterminate"); assert.equal(leases, 0);
+const completed = new CredentialGatedPublicationReconciler({ reader: { async read() { return { status: "completed" as const, completion: { source_event_id: source, assistant_text: "Bounded reply", completed_at: new Date().toISOString(), tools: [] as [] } }; } }, broker, verifier: { async verify(id, event, text) { return id === source && event === reply && text === "Bounded reply"; } } });
+assert.equal((await completed.reconcile(source)).status, "verified"); assert.equal(leases, 1); assert.equal(publishes, 1); assert.equal(closes, 1);
+const failedVerify = new CredentialGatedPublicationReconciler({ reader: { async read() { return { status: "completed" as const, completion: { source_event_id: source, assistant_text: "Bounded reply", completed_at: new Date().toISOString(), tools: [] as [] } }; } }, broker, verifier: { async verify() { return false; } } });
+assert.equal((await failedVerify.reconcile(source)).status, "indeterminate"); assert.equal(closes, 2);
+console.log("1..1\n# 1 credential-gated publication test passed");

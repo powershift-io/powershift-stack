@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { RelayRootIntakeAdapter } from "../src/operator-intake.js";
+import type { RootDispatchBinding } from "../src/root-dispatch-types.js";
+const key = "agent:down:buzz:intake"; const now = "2026-08-08T13:20:00.000Z";
+const binding: RootDispatchBinding = { binding_id: "down", protocol_version: "0.1", relay: "wss://relay", community_id: "c", openclaw_agent_id: "down", openclaw_session_key: key, openclaw_session_key_sha256: createHash("sha256").update(key).digest("hex"), openclaw_session_id: "existing", allowed_channel_ids: ["engine"], allowed_source_pubkeys: ["aa".repeat(32)], valid_from: now, valid_until: "2026-08-08T14:20:00.000Z", require_existing: true, reset_session: false, status: "active" };
+const event = (id: string, tags: string[][]) => ({ id: id.repeat(32), pubkey: "aa".repeat(32), kind: 45001, channel_id: "engine", content: "bounded root", tags, received_at: now });
+const adapter = new RelayRootIntakeAdapter({ bindings: [binding], verifier: { async verify() { return true; } }, query: { async roots() { return [event("11", [["p", "down"]]), event("22", []), event("33", [["p", "down"], ["p", "dance"]])]; } } });
+const result = await adapter.poll(now);
+assert.equal(result.accepted.length, 1); assert.equal(result.accepted[0]?.source_event_id, "11".repeat(32)); assert.equal(result.accepted[0]?.openclaw_session_id, "existing");
+assert.deepEqual(result.rejected.map((item) => item.code), ["ambiguous_routing", "ambiguous_routing"]);
+console.log("1..1\n# 1 relay intake test passed");

@@ -1,0 +1,32 @@
+{
+  "name": "@powershift/governed-collaboration-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public-safe reference governance membrane for Buzz, OpenClaw, and PowerShift deployments.",
+  "license": "CC-BY-SA-4.0",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "bin": {
+    "powershift-operator-control": "dist/src/operator-control-cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm build && node dist/test/adapter.test.js && node dist/test/authority.test.js && node dist/test/receipt.test.js && node dist/test/conduit.test.js && node dist/test/openclaw-readiness.test.js && node dist/test/acp-response.test.js && node dist/test/role-projection.test.js && node dist/test/workspace-architecture.test.js && node dist/test/root-dispatch.test.js && node dist/test/operator-control.test.js && node dist/test/operator-supervisor.test.js && node dist/test/operator-publication.test.js && node dist/test/operator-intake.test.js && node dist/test/operator-e2e.test.js && node dist/test/operator-soak.test.js && node dist/test/custody-portability.test.js && node dist/test/custody-relay.test.js && node dist/test/operational-telemetry.test.js && node dist/test/context-broker.test.js && node dist/test/protocol.test.js && node dist/test/runtime-state.test.js && node dist/test/portability.test.js",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.5"
+  }
+}

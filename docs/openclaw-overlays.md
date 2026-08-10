@@ -48,6 +48,24 @@ And they can package substrate-facing implementation surfaces such as:
 The canonical tracker for implemented and planned runtime enhancements lives at:
 - [`docs/openclaw-overlay-tracker.md`](openclaw-overlay-tracker.md)
 
+### Governed Collaboration Adapter for Buzz and OpenClaw
+
+Path:
+- `overlays/openclaw/buzz-governed-agency/`
+
+Purpose:
+- bind signed transport identities to canonical organizational actors
+- evaluate authority and project explicit request-scoped roles before a Mind turn
+- release versioned, digest-pinned context to an exact existing OpenClaw session
+- prevent replay and return independently verifiable lifecycle and publication receipts
+
+Current maturity:
+- **implemented release candidate:** protocol `0.1`, dependency-free TypeScript core, injected ports, durable single-supervisor state, operator controls, and conformance suite
+- **field proven within a supervised reference deployment:** identity/session continuity, one-root/one-turn dispatch, replay protection, and signed return delivery
+- **held before broader production:** unattended reliability, horizontally scaled storage, native mobile push custody, and consequential execution
+
+This overlay publishes the governed-collaboration pattern while excluding deployment identities, credentials, endpoints, private policy, and operational evidence.
+
 ### Inter-Agent Handoff Receipts
 
 Path:

@@ -1,0 +1,14 @@
+{
+  "protocol": "0.1",
+  "runtime_state_directory": "/srv/powershift-governed-adapter",
+  "supervisor_identity": "governed-adapter-primary",
+  "transport": {
+    "kind": "buzz-nostr",
+    "relay": "wss://relay.example.invalid"
+  },
+  "openclaw": {
+    "session_policy": "require_existing_no_reset"
+  },
+  "execution_default": "not_executed",
+  "authority_transfer_default": "none"
+}
