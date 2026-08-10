@@ -25,6 +25,7 @@ This is ready for review and supervised deployment. It is not a claim of unatten
 - `docs/OPERATIONS.md` — queue, storage, lifecycle, and recovery model
 - `docs/SECURITY-AND-PUBLIC-SAFETY.md` — threat boundary and extraction review
 - `docs/INSTALL-UPGRADE-ROLLBACK.md` — clean installation, removal, upgrade, and rollback
+- `docs/WHAT-WE-BUILT.md` — constituent-facing field note for stakeholders, communities, and experimenters
 - `scripts/` — refusal-safe runtime-directory helpers and clean proof harness
 - `examples/` — deployment-neutral configuration shape
 
