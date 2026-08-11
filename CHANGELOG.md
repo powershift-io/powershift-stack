@@ -9,6 +9,18 @@ The repository uses two version layers:
 
 Current public baseline on `main`: `2026.05-public-engagement`.
 
+## Candidate — Governed Collaboration Adapter `0.1.0`
+
+Status: staged for steward review; not yet part of the public baseline.
+
+Included:
+
+- Add the public-safe Buzz/OpenClaw governed-collaboration overlay.
+- Define protocol `0.1`, compatibility rules, and machine-readable capabilities.
+- Package atomic local state, an exclusive single-supervisor lease, and revision-controlled operator lifecycle controls.
+- Add clean install/removal, upgrade, rollback, licensing, threat-boundary, and public-safety guidance.
+- Add conformance, replay, restart, lifecycle, portability, telemetry, and soak tests without PSI deployment harnesses.
+
 ## Current — `2026.05-public-engagement`
 
 Status: live on `main` as of 2026-05-13.

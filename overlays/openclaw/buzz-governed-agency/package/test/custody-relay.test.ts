@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { RelayCustodySource, TransactionalRelayCustodySink } from "../src/custody-relay.js";
+import { PortableCustodyExporter, PortableCustodyRestorer } from "../src/custody-portability.js";
+const b64 = (value: string) => Buffer.from(value).toString("base64");
+const object = (id: string, kind: "event"|"binding"|"receipt"|"operator_state"|"attachment", references: string[] = []) => ({ id, kind, media_type: "application/json", body_base64: b64(id), references });
+const reader = { async events() { return [object("event:1", "event", ["attachment:1"])]; }, async bindings() { return [object("binding:1", "binding", ["event:1"])]; }, async receipts() { return [object("receipt:1", "receipt", ["event:1"])]; }, async operatorStates() { return [object("operator:1", "operator_state", ["receipt:1"])]; }, async attachments() { return [object("attachment:1", "attachment")]; } };
+const bundle = await new PortableCustodyExporter(new RelayCustodySource(reader)).export("2026-08-08T13:50:00.000Z");
+const restored: string[] = []; let commits = 0; let rollbacks = 0;
+const sink = new TransactionalRelayCustodySink({ async begin() { const staged: string[] = []; return { async stage(item) { staged.push(item.id); }, async commit() { restored.push(...staged); commits++; }, async rollback() { rollbacks++; } }; } });
+await new PortableCustodyRestorer({ sink, verifier: { async verify() { return true; } } }).restore(bundle);
+assert.equal(restored.length, 5); assert.equal(commits, 1); assert.equal(rollbacks, 0);
+const failing = new TransactionalRelayCustodySink({ async begin() { return { async stage(item) { if (item.id === "receipt:1") throw new Error("isolated failure"); }, async commit() { throw new Error("must not commit"); }, async rollback() { rollbacks++; } }; } });
+await assert.rejects(new PortableCustodyRestorer({ sink: failing, verifier: { async verify() { return true; } } }).restore(bundle), /isolated failure/); assert.equal(rollbacks, 1);
+console.log("1..1\n# 1 relay extraction and transactional restore test passed");

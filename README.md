@@ -88,6 +88,7 @@ Runtime-specific extensions for PowerShift deployments running on OpenClaw.
 
 | Overlay | Purpose |
 |---|---|
+| [`overlays/openclaw/buzz-governed-agency/`](overlays/openclaw/buzz-governed-agency/) | Governed collaboration membrane binding signed Buzz interactions to canonical actors, scoped roles, explicit authority, exact existing OpenClaw sessions, and verifiable receipts |
 | [`overlays/openclaw/inter-agent-receipts/`](overlays/openclaw/inter-agent-receipts/) | Orchestrator-visible proof for inter-agent handoffs, with shared markdown receipts, lifecycle threads, and an additive sender-side handoff wrapper |
 | [`overlays/openclaw/mind-conduits/`](overlays/openclaw/mind-conduits/) | Governed Mind-to-Mind interconnects, starting with Tier 1 GitHub-backed packet exchange and a roadmap toward OpenClaw-native and remote-network tiers |
 | [`docs/memory-architecture.md`](docs/memory-architecture.md) | OpenClaw memory architecture pattern for governed intelligence: recall, Dreaming, wiki canon, work-state boundaries, and scoped plugin pilots |

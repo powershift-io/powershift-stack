@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { OperatorControlPlane } from "../src/operator-control.js";
+import { RelayRootIntakeAdapter } from "../src/operator-intake.js";
+import { CredentialGatedPublicationReconciler } from "../src/operator-publication.js";
+import { DurableOperatorSupervisor } from "../src/operator-supervisor.js";
+import { OperationalTelemetryLedger, SupervisorTelemetryIntegrator } from "../src/operational-telemetry.js";
+import { BuzzRootDispatchQueue, JsonFileRootDispatchStore } from "../src/root-dispatch.js";
+import type { RootDispatchBinding } from "../src/root-dispatch-types.js";
+
+const at = "2026-08-08T13:30:00.000Z"; const source = "ad".repeat(32); const reply = "be".repeat(32); const key = "agent:down:buzz:e2e";
+const binding: RootDispatchBinding = { binding_id: "down", protocol_version: "0.1", relay: "wss://relay", community_id: "community", openclaw_agent_id: "down", openclaw_session_key: key, openclaw_session_key_sha256: createHash("sha256").update(key).digest("hex"), openclaw_session_id: "existing-session", allowed_channel_ids: ["engine-room"], allowed_source_pubkeys: ["aa".repeat(32)], valid_from: at, valid_until: "2026-08-08T14:30:00.000Z", require_existing: true, reset_session: false, status: "active" };
+const root = { id: source, pubkey: "aa".repeat(32), kind: 45001, channel_id: "engine-room", content: "@Down bounded operator proof", tags: [["p", "down"]], received_at: at };
+const intake = new RelayRootIntakeAdapter({ bindings: [binding], verifier: { async verify() { return true; } }, query: { async roots() { return [root]; } } });
+const dir = mkdtempSync(join(tmpdir(), "buzz-control-e2e-")); const controlPath = join(dir, "control.json"); const queuePath = join(dir, "queue.json"); const telemetryPath = join(dir, "telemetry.json");
+let turns = 0; let leases = 0; let writes = 0; let closes = 0;
+const publication = new CredentialGatedPublicationReconciler({ reader: { async read(id) { return { status: "completed", completion: { source_event_id: id, assistant_text: "Bounded reply", completed_at: at, tools: [] } }; } }, broker: { async lease() { leases++; return { async publish() { writes++; return { status: "accepted", reply_event_id: reply }; }, close() { closes++; } }; } }, verifier: { async verify(id, response, text) { return id === source && response === reply && text === "Bounded reply"; } } });
+const build = () => { const control = new OperatorControlPlane(controlPath); const store = new JsonFileRootDispatchStore(queuePath, at); const queue = new BuzzRootDispatchQueue({ bindings: [binding], operator_control: control, store, transport: { async dispatch() { turns++; return { status: "accepted", transport_ref: "exact-session-turn", accepted_at: at, evidence_refs: [] }; } } }); const ledger = new OperationalTelemetryLedger(telemetryPath); const telemetry = new SupervisorTelemetryIntegrator({ dispatch: store, control, ledger, completion: { async read() { return { openclaw_session_id: binding.openclaw_session_id, provider: "openai", model: "gpt-5", completed_at: at, input_tokens: 50, output_tokens: 10 }; } } }); return { control, ledger, supervisor: new DurableOperatorSupervisor({ queue, control, completion: publication, telemetry }) }; };
+const first = build(); const polled = await intake.poll(at); assert.equal(polled.accepted.length, 1); assert.equal(first.supervisor.accept(polled.accepted[0]!, at).status, "queued");
+const cycle = await first.supervisor.cycle("down", at); assert.deepEqual(cycle.reconciled, [source]); assert.equal(first.control.get(source)?.disposition, "reconciled"); assert.deepEqual([turns, leases, writes, closes], [1, 1, 1, 1]);
+assert.equal(first.ledger.inspect().length, 1); assert.equal(first.ledger.inspect()[0]?.queue_depth_at_claim, 1);
+const restarted = build(); assert.equal(restarted.control.get(source)?.disposition, "reconciled"); assert.equal(restarted.ledger.inspect().length, 1); const replay = await intake.poll(at); assert.equal(restarted.supervisor.accept(replay.accepted[0]!, at).status, "duplicate"); await restarted.supervisor.cycle("down", at); assert.deepEqual([turns, leases, writes, closes], [1, 1, 1, 1]); assert.equal(restarted.ledger.inspect().length, 1);
+rmSync(dir, { recursive: true, force: true }); console.log("1..1\n# 1 production-shaped operator e2e test passed");
